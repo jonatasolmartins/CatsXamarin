@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cats.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,20 +13,7 @@ namespace Cats
         public App()
         {
             // The root page of your application
-            var content = new ContentPage
-            {
-                Title = "Cats",
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
+            var content = new CatsPage();
 
             MainPage = new NavigationPage(content);
         }

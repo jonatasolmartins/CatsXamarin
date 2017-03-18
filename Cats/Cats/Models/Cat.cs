@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace Cats.Models
 {
+
+    [DataTable("Cats")]
     public class Cat
     {
+        [Version]
+        public string AzureVersion { get; set; }
         public string Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
